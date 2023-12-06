@@ -1,7 +1,7 @@
-package dependencyInversionPrinciple.badImplementation
+package dependencyInversionPrinciple.betterImplemenation
 
-class WeatherTracker (private var conditions: String, private val phone: Phone,
-                      private val emailer: Emailer
+class WeatherTracker (private var conditions: String, private val phone: Alerter,
+                      private val emailer: Alerter
 ) {
 
     fun setCurrentConditions(weatherDescription: String) {
@@ -9,10 +9,11 @@ class WeatherTracker (private var conditions: String, private val phone: Phone,
         if (weatherDescription === "rainy") {
             val alert: String = phone.generateWeatherAlert(weatherDescription)
             print(alert)
-        }
-        if (weatherDescription === "sunny") {
+        } else if (weatherDescription === "sunny") {
             val alert: String = emailer.generateWeatherAlert(weatherDescription)
             print(alert)
+        } else {
+            throw NotImplementedError()
         }
     }
 

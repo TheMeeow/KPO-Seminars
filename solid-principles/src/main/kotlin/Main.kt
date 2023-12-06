@@ -1,12 +1,10 @@
-import dependencyInversionPrinciple.badImplementation.Emailer
-import dependencyInversionPrinciple.badImplementation.Phone
-import dependencyInversionPrinciple.badImplementation.WeatherTracker
-import interfaceSegregationPrinciple.badImplementation.Eagle
-import interfaceSegregationPrinciple.badImplementation.Penguin
+import dependencyInversionPrinciple.betterImplemenation.Emailer
+import dependencyInversionPrinciple.betterImplemenation.Phone
+import dependencyInversionPrinciple.betterImplemenation.WeatherTracker
+import interfaceSegregationPrinciple.betterImplementation.Eagle
+import interfaceSegregationPrinciple.betterImplementation.Penguin
 import openClosedPrinciple.betterImplementation.EmailGreeting
 import openClosedPrinciple.betterImplementation.FormalGreeting
-import openClosedPrinciple.betterImplementation.CasualGreeting
-import openClosedPrinciple.betterImplementation.IntimateGreeting
 
 fun main(args: Array<String>) {
     // ЗАДАНИЕ 1: Приветствие
@@ -29,7 +27,7 @@ fun main(args: Array<String>) {
 
     // Пингвин не хочет чувствовать себя ущербным:(
     // А мы не хотим видеть исключения в коде...
-    penguin.fly()
+    penguin.swim()
 
 
 
